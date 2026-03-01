@@ -1,4 +1,5 @@
 import streamlit as st
+from math_utils import square, cube, fifth_power
 
 # Streamlit UI
 st.title("Power Calculator")
@@ -8,9 +9,9 @@ st.write("Enter a number to calculate its square, cube, and fifth power.")
 n = st.number_input("Enter an integer", value=1, step=1)
 
 # Calculate results
-square = n ** 2
-cube = n ** 3
-fifth_power = n ** 5
+square = square(n)
+cube = cube(n)
+fifth_power = fifth_power(n)
 
 # Display results
 st.write(f"The square of {n} is: {square}")
